@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { getQuestion } from '../../http';
 import { QuizCard } from './QuizCard';
 
 export const Question = (props) => {
@@ -17,6 +18,14 @@ export const Question = (props) => {
         },
     ]
     const [questionSet, setQuestionSet] = useState(tmpquestion);
+    useEffect(() => {
+        getQuestion().then((res)=>{
+            console.log(res);
+            setQuestionSet(res.data);
+
+        })
+    }, [])
+    
   
     return (
       <>
@@ -24,7 +33,7 @@ export const Question = (props) => {
           <div className='px-6 mt-5 mx-6'>
 
             {
-                questionSet.map((que)=>{
+                questionSet && questionSet.length > 0 && questionSet.map((que)=>{
                     return <QuizCard que={que}/>
                 })
             }

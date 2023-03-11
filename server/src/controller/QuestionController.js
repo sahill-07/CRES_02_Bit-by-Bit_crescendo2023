@@ -2,7 +2,7 @@ exports.question = {
     get : (req, res) => {
         const questions = [
             {
-                QUESTION: 'do you like ',
+                QUESTION: 'do you like from server',
                 OPTION: ['yes', 'no']
             },
             {
