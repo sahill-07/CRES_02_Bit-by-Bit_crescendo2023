@@ -1,9 +1,10 @@
 import React from 'react'
+import { Question } from "./Questions";
 
 export const LandingPage = () => {
   return (
     <>
-    <h1>uihfdsyugfsu</h1>
+    <Question/>
     </>
   )
 }
