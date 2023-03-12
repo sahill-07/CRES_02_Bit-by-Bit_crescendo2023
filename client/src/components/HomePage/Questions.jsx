@@ -13,10 +13,10 @@ export const Question = (props) => {
             'OPTION': ["opt1", "opt2"]
         },
         {
-            "QUESTION": 'this is que1',
-            'OPTION': ["opt1", "opt2" ,"opt"]
-        },
-    ]
+             "QUESTION": 'this is que1',
+             'OPTION': ["opt1", "opt2" ,"opt3"]
+         },
+     ]
     const [questionSet, setQuestionSet] = useState(tmpquestion);
     useEffect(() => {
         getQuestion().then((res)=>{
@@ -29,8 +29,8 @@ export const Question = (props) => {
   
     return (
       <>
-      <div className=' ' style={{border: '10px solid white shadow-md'}}>
-          <div className='px-6 mt-5 mx-6'>
+      <div className='max-w-fit min-w-[40vw]' >
+          <div className=''>
 
             {
                 questionSet && questionSet.length > 0 && questionSet.map((que)=>{

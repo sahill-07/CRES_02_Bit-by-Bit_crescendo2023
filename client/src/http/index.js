@@ -48,6 +48,7 @@ export const postUser = async (data)=> await api('/user/addUser', data, 'post');
 export const getUserDetails = async ()=> await api('/user/userDetail', '', 'get');
 
 export const getQuestion = async ()=> await api('/questions', '', 'get');
+export const postQuestion = async (data) => await api('/questions/result' , data, 'post' )
 
 export default api;
 
